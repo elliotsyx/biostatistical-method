@@ -1,0 +1,31 @@
+---
+title: "Biostatistical Method HW1"
+author: "Yixiao Sun"
+date: "2023-09-21"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+df<-c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
+mean(df)
+median(df)
+range(df)
+sd(df)
+
+df_plot<-boxplot(df)
+```
+
+```{r}
+df2<-c(67, 50, 85, 43, 64, 35, 47, 97, 58, 58, 10, 56, 50)
+```
+
+```{r}
+par(mfrow=c(1,1))
+df_twoplots<-boxplot(df,df2, main="Comparsion between 2 boxplots Bikes vs. Cars", ylab = "depression scores", xlab= "The type of Accidents", names=c("Bikes","Cars"))
+```
+
